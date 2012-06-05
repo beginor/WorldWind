@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LayerSet Name="Polygon Features" ShowOnlyOneLayer="false" ShowAtStartup="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="LayerSet.xsd" RenderPriority="Custom">
+	<PolygonFeature ShowAtStartup="true">
+		<Name>Sample Polygon</Name>
+		<ExtrudeHeight>400</ExtrudeHeight>
+		<ExtrudeUpwards>true</ExtrudeUpwards>
+		<DistanceAboveSurface>0</DistanceAboveSurface>
+		<MinimumDisplayAltitude>0</MinimumDisplayAltitude>
+		<MaximumDisplayAltitude>5000000</MaximumDisplayAltitude>
+		<exterior>
+			<LinearRing>
+				<posList>
+					113.2556184568185,22.06893347770884 113.2406782967708,22.04868753822816,0 113.2396839093388,22.0218250439918,0 113.2621054460241,22.00919729045903,0 113.3015684648644,22.03521773358856,0 113.3022223010423,22.06894949772108,0
+				</posList>
+			</LinearRing>
+		</exterior>
+		<FeatureColor>
+			<Red>255</Red>
+			<Green>100</Green>
+			<Blue>0</Blue>
+		</FeatureColor>
+		<Opacity>80</Opacity>
+		<Outline>true</Outline>
+		<OutlineColor>
+			<Red>255</Red>
+			<Green>255</Green>
+			<Blue>255</Blue>
+		</OutlineColor>
+	</PolygonFeature>
+</LayerSet>

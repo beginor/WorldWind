@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30428</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFE5DDE1-9756-4B07-852A-A94AEBF027D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorldWind</RootNamespace>
+    <AssemblyName>WorldWindC</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\bin\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2911.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Angle.cs" />
+    <Compile Include="BinaryTriangleTree.cs" />
+    <Compile Include="Camera\MomentumCamera.cs" />
+    <Compile Include="Configuration\LocationType.cs" />
+    <Compile Include="Configuration\MeasureMode.cs" />
+    <Compile Include="CursorType.cs" />
+    <Compile Include="LayerDescriptor.cs" />
+    <Compile Include="Net\Wms\WmsDescriptor.cs" />
+    <Compile Include="OnScreenMessage.cs" />
+    <Compile Include="PolygonTriangulation\CLineSegment.cs" />
+    <Compile Include="PolygonTriangulation\ConstantValue.cs" />
+    <Compile Include="PolygonTriangulation\InvalidInputGeometryDataException.cs" />
+    <Compile Include="PolygonTriangulation\PolygonType.cs" />
+    <Compile Include="PolygonTriangulation\VertexType.cs" />
+    <Compile Include="Renderable\BoundaryLayer.cs" />
+    <Compile Include="BoundingBox.cs" />
+    <Compile Include="BoundingSphere.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="Camera\Camera.cs" />
+    <Compile Include="Configuration\ConfigurationLoader.cs" />
+    <Compile Include="Renderable\CameraView.cs" />
+    <Compile Include="Renderable\ChildLocation.cs" />
+    <Compile Include="Renderable\Delegates.cs" />
+    <Compile Include="Renderable\DownloadableIcon.cs" />
+    <Compile Include="Renderable\DownloadableImageFromIconSet.cs" />
+    <Compile Include="DrawArgs.cs" />
+    <Compile Include="Net\GeoSpatialDownloadRequest.cs" />
+    <Compile Include="Renderable\Icon.cs" />
+    <Compile Include="IGlobe.cs" />
+    <Compile Include="ImageHelper.cs" />
+    <Compile Include="Renderable\ImageLayer.cs" />
+    <Compile Include="ImageStore.cs" />
+    <Compile Include="ImageTileService.cs" />
+    <Compile Include="Renderable\IRenderable.cs" />
+    <Compile Include="Renderable\LatLongGrid.cs" />
+    <Compile Include="Renderable\LineFeature.cs" />
+    <Compile Include="LineGraph.cs" />
+    <Compile Include="MathEngine.cs" />
+    <Compile Include="Renderable\MeshLayer.cs" />
+    <Compile Include="Renderable\MyChart.cs" />
+    <Compile Include="Renderable\MyCharts.cs" />
+    <Compile Include="Renderable\MyIcons.cs" />
+    <Compile Include="NltImageStore.cs" />
+    <Compile Include="Renderable\PathLine.cs" />
+    <Compile Include="Renderable\PathList.cs" />
+    <Compile Include="PerformanceTimer.cs" />
+    <Compile Include="Point3d.cs" />
+    <Compile Include="Renderable\PolygonFeature.cs" />
+    <Compile Include="Renderable\PolygonLayer.cs" />
+    <Compile Include="PolygonTriangulation\AnalyticGeometryException.cs" />
+    <Compile Include="PolygonTriangulation\CLine.cs" />
+    <Compile Include="PolygonTriangulation\CPoint2D.cs" />
+    <Compile Include="PolygonTriangulation\CPolygon.cs" />
+    <Compile Include="PolygonTriangulation\CPolygonShape.cs" />
+    <Compile Include="PolygonTriangulation\PolygonDirection.cs" />
+    <Compile Include="Renderable\RenderPriority.cs" />
+    <Compile Include="Renderable\ScreenAlignment.cs" />
+    <Compile Include="VisualControl\ProgressBar.cs" />
+    <Compile Include="Renderable\QuadTile.cs" />
+    <Compile Include="Renderable\QuadTileSet.cs" />
+    <Compile Include="Quaterniond.cs" />
+    <Compile Include="Renderable\RenderableObject.cs" />
+    <Compile Include="Renderable\RenderableObjectList.cs" />
+    <Compile Include="Renderable\GeoSpatialDownloadRequest.cs" />
+    <Compile Include="Renderable\ScreenOverlay.cs" />
+    <Compile Include="Configuration\SettingsBase.cs" />
+    <Compile Include="Renderable\ShapeFileLayer.cs" />
+    <Compile Include="Renderable\ShapeLayer.cs" />
+    <Compile Include="SurfaceImage.cs" />
+    <Compile Include="SurfaceTile.cs" />
+    <Compile Include="Renderable\TerrainPath.cs" />
+    <Compile Include="Terrain\NltTerrainAccessor.cs" />
+    <Compile Include="Terrain\TerrainAccessor.cs" />
+    <Compile Include="Terrain\TerrainDownloadRequest.cs" />
+    <Compile Include="Terrain\TerrainTileService.cs" />
+    <Compile Include="Renderable\TiledPlacenameSet.cs" />
+    <Compile Include="ViewFrustum.cs" />
+    <Compile Include="VisualControl\ColorBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualControl\PropertyBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Widgets\IInteractive.cs" />
+    <Compile Include="Widgets\IWidget.cs" />
+    <Compile Include="Widgets\IWidgetCollection.cs" />
+    <Compile Include="Widgets\WidgetCollection.cs" />
+    <Compile Include="Net\Wms\WMSLayerAccessor.cs" />
+    <Compile Include="Renderable\World.cs" />
+    <Compile Include="Camera\WorldCamera.cs" />
+    <Compile Include="Configuration\WorldSettings.cs" />
+    <Compile Include="WorldSurfaceRenderer.cs" />
+    <Compile Include="Widgets\PictureBox.cs" />
+    <Compile Include="Widgets\RootWidget.cs" />
+    <Compile Include="Widgets\TextBox.cs" />
+    <Compile Include="Widgets\TextLabel.cs" />
+    <Compile Include="Widgets\Form.cs" />
+    <Compile Include="Widgets\WidgetUtil.cs" />
+    <Compile Include="Configuration\WorldWindSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Renderable\DownloadState.cs" />
+    <Compile Include="Utilities\BindingsCheck.cs" />
+    <Compile Include="Utilities\ErrorDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\Log.cs" />
+    <Compile Include="Utilities\Win32Message.cs" />
+    <Compile Include="Net\DownloadQueue.cs" />
+    <Compile Include="Net\DownloadRequest.cs" />
+    <Compile Include="Net\Monitor\HttpHeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Net\Monitor\ProgressMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Net\WebDownload.cs" />
+    <Compile Include="Net\WebDownloadRequest.cs" />
+    <Compile Include="Interop\NativeMethods.cs" />
+    <Compile Include="WorldWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VisualControl\ColorBar.resx">
+      <DependentUpon>ColorBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualControl\PropertyBrowser.resx">
+      <DependentUpon>PropertyBrowser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\ErrorDisplay.resx">
+      <DependentUpon>ErrorDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net\Monitor\HttpHeaderForm.resx">
+      <DependentUpon>HttpHeaderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net\Monitor\ProgressMonitor.resx">
+      <DependentUpon>ProgressMonitor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorldWindow.resx">
+      <DependentUpon>WorldWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

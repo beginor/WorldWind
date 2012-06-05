@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LayerSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="LayerSet.xsd" Name="NASA" ShowAtStartup="true" ShowOnlyOneLayer="false" RenderPriority="TerrainMappedImages">
+	<QuadTileSet ShowAtStartup="true">
+		<Name>BlueMarble</Name>
+		<DistanceAboveSurface>0</DistanceAboveSurface>
+		<BoundingBox>
+			<North>
+				<Value>90.0</Value>
+			</North>
+			<South>
+				<Value>-90.0</Value>
+			</South>
+			<West>
+				<Value>-180.0</Value>
+			</West>
+			<East>
+				<Value>180.0</Value>
+			</East>
+		</BoundingBox>
+		<TerrainMapped>true</TerrainMapped>
+		<ImageAccessor>
+			<LevelZeroTileSizeDegrees>36.0</LevelZeroTileSizeDegrees>
+			<NumberLevels>4</NumberLevels>
+			<TextureSizePixels>512</TextureSizePixels>
+			<ImageFileExtension>jpg</ImageFileExtension>
+			<ImageTileService>
+				<ServerUrl>http://nww.terraserver-usa.com/nwwtile.ashx</ServerUrl>
+        <!--<ServerUrl>http://localhost/worldwind/tilehandler.ashx</ServerUrl>-->
+				<DataSetName>106</DataSetName>
+				<ServerLogoFilePath>Data\Icons\bmng.png</ServerLogoFilePath>
+			</ImageTileService>
+		</ImageAccessor>
+	</QuadTileSet>
+   <QuadTileSet ShowAtStartup="true">
+			<Name>NLT Landsat7</Name>
+			<DistanceAboveSurface>0</DistanceAboveSurface>
+			<BoundingBox>
+				<North>
+					<Value>90.0</Value>
+				</North>
+				<South>
+					<Value>-90.0</Value>
+				</South>
+				<West>
+					<Value>-180.0</Value>
+				</West>
+				<East>
+					<Value>180.0</Value>
+				</East>
+			</BoundingBox>
+			<TerrainMapped>true</TerrainMapped>
+			<ImageAccessor>
+				<LevelZeroTileSizeDegrees>2.25</LevelZeroTileSizeDegrees>
+				<NumberLevels>5</NumberLevels>
+				<TextureSizePixels>512</TextureSizePixels>
+				<ImageFileExtension>jpg</ImageFileExtension>
+				<ImageTileService>
+					<ServerUrl>http://worldwind25.arc.nasa.gov/tile/tile.aspx</ServerUrl>
+					<DataSetName>105</DataSetName>
+					<ServerLogoFilePath>Data\Icons\bmng.png</ServerLogoFilePath>
+				</ImageTileService>
+			</ImageAccessor>
+		</QuadTileSet>
+</LayerSet>
